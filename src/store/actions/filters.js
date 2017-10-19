@@ -13,11 +13,17 @@ export const sortByAmount = () => ({
   sortBy: 'amount'
 });
 
+/**
+ * @param {moment} startDate
+ */
 export const setStartDate = (startDate) => ({
   type: 'SET_START_DATE',
   startDate
 });
 
+/**
+ * @param {moment} stopDate
+ */
 export const setStopDate = (stopDate) => ({
   type: 'SET_STOP_DATE',
   stopDate

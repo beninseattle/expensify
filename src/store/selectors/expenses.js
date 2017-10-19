@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export default (expenses, filters) => {
   let visibleExpenses = expenses.filter((expense) => {
     if (filters.text.length > 0) {
@@ -6,13 +8,13 @@ export default (expenses, filters) => {
         return false;
       }
     }
-    if (typeof(filters.startDate) === 'number') {
-      if (expense.createdAt < filters.startDate) {
+    if (filters.startDate !== null) {
+      if (moment(expense.createdAt).isBefore(filters.startDate, 'day')) {
         return false;
       }
     }
-    if (typeof(filters.stopDate) === 'number') {
-      if (expense.createdAt > filters.stopDate) {
+    if (filters.stopDate !== null) {
+      if (moment(expense.createdAt).isAfter(filters.stopDate, 'day')) {
         return false;
       }
     }
