@@ -1,29 +1,26 @@
-import uuid from 'uuid';
-
-export const addExpense = ({
-                      id = '',
-                      description = '',
-                      note = '',
-                      amount = 0,
-                      createdAt = 0
-                    } = {}) => ({
+/**
+ * @callback expenseAction
+ * @param {Expense} expense
+ */
+export const addExpense = (expense) => ({
   type: 'ADD_EXPENSE',
-  expense: {
-    id: uuid(),
-    description,
-    note,
-    amount,
-    createdAt
-  }
+  expense
 });
 
-export const deleteExpense = ({id} = {}) => ({
+/**
+ * @callback expenseAction
+ * @param {Expense} expense - the expense to remove from the store
+ */
+export const deleteExpense = (expense) => ({
   type: 'DELETE_EXPENSE',
-  id
+  expense
 });
 
-export const editExpense = (id, updates) => ({
+/**
+ * @callback expenseAction
+ * @param {Expense} expense - object with 1 or more of the fields of an expense
+ */
+export const editExpense = (expense) => ({
   type: 'EDIT_EXPENSE',
-  id: id,
-  updates
+  expense
 });

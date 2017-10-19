@@ -1,4 +1,4 @@
-export const getVisibleExpenses = (expenses, filters) => {
+export default (expenses, filters) => {
   let visibleExpenses = expenses.filter((expense) => {
     if (filters.text.length > 0) {
       if (expense.note.toLowerCase().indexOf(filters.text.toLowerCase()) === -1 &&
