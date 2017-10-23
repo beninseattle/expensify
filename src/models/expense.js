@@ -31,8 +31,8 @@ export default class Expense {
    */
   constructor( expense ){
     this.id = expense && expense.id ? expense.id : uuid();
-    this.description = expense && expense.description.length > 0 ? expense.description : '';
-    this.note = expense && expense.note.length > 0 ? expense.note : '';
+    this.description = expense && expense.description && expense.description.length > 0 ? expense.description : '';
+    this.note = expense && expense.note && expense.note.length > 0 ? expense.note : '';
     this.amount = expense && expense.amount ? expense.amount : 0;
     this.createdAt = expense && expense.createdAt ? expense.createdAt : Date.now();
   }
