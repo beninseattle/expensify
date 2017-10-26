@@ -1,5 +1,5 @@
 import {expensesReducer} from "../../../store/reducers/expenses";
-import expenses from '../fixtures/expenses';
+import expenses from '../../fixtures/expenses';
 import Expense from '../../../models/expense';
 
 const expensesReducerDefaultState = [];

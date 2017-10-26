@@ -14,6 +14,9 @@
     "chalk": "1.1.3",
     "css-loader": "0.28.4",
     "dotenv": "4.0.0",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "enzyme-to-json": "^3.1.4",
     "eslint": "4.4.1",
     "eslint-config-react-app": "^2.0.1",
     "eslint-loader": "1.9.0",
@@ -35,7 +38,7 @@
     "promise": "8.0.1",
     "react": "^16.0.0",
     "react-addons-shallow-compare": "^15.6.2",
-    "react-dates": "^13.0.5",
+    "react-dates": "^13.0.6",
     "react-dev-utils": "^4.1.0",
     "react-dom": "^16.0.0",
     "react-modal": "^3.0.0",
@@ -61,7 +64,7 @@
       "src/**/*.{js,jsx}"
     ],
     "setupFiles": [
-      "<rootDir>/src/setupTests.js",
+      "<rootDir>/src/tests/setupTests.js",
       "<rootDir>/config/polyfills.js"
     ],
     "testMatch": [
@@ -88,6 +91,9 @@
       "web.jsx",
       "jsx",
       "node"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   },
   "babel": {
@@ -97,5 +103,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "react-test-renderer": "^16.0.0"
   }
 }

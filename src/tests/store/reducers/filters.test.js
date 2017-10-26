@@ -4,8 +4,8 @@ import {filtersReducer} from "../../../store/reducers/filters";
 const filtersReducerDefaultState = {
   text: '',
   sortBy: 'date',
-  startDate: moment().startOf('month'),
-  stopDate: moment().endOf('month')
+  startDate: moment(Date.now()).startOf('month').valueOf(),
+  stopDate: moment(Date.now()).endOf('month').valueOf()
 };
 
 test('should setup default filter values', () => {
@@ -35,13 +35,13 @@ test('should set text filter', () => {
 });
 
 test('should set start date filter', () => {
-  const testDate = moment().add(2, 'days');
+  const testDate = moment().add(2, 'days').valueOf();
   const state = filtersReducer(undefined, {type: 'SET_START_DATE', startDate: testDate});
   expect(state.startDate).toEqual(testDate);
 });
 
 test('should set stop date filter', () => {
-  const testDate = moment().subtract(5, 'days');
+  const testDate = moment().subtract(5, 'days').valueOf();
   const state = filtersReducer(undefined, {type: 'SET_STOP_DATE', stopDate: testDate});
   expect(state.stopDate).toEqual(testDate);
 });

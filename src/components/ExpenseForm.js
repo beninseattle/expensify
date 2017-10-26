@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import moment from 'moment';
+// react dates must be initialized before importing
 import 'react-dates/initialize';
 import {SingleDatePicker} from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
 import Expense from '../models/expense';
 
 /**
  * @class ExpenseForm
  * @property {Object} props
  * @property {onSubmitExpenseCallback} props.onSubmit
- * @property {Expense} expense
+ * @property {Expense} props.expense
+ * @property {Object} state
+ * @property {Expense} state.expense
  */
 export default class ExpenseForm extends Component {
   onDescriptionChange = (e) => {
@@ -106,7 +108,7 @@ export default class ExpenseForm extends Component {
           <textarea
             placeholder="Add a note (optional)"
             value={this.state.expense.note}
-            onChange={this.onNoteChange}></textarea><br/>
+            onChange={this.onNoteChange} /><br/>
           <button>{this.submitButton}</button>
         </form>
       </div>

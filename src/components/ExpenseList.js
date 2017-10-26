@@ -9,17 +9,21 @@ import selectExpenses from '../store/selectors/expenses';
  * @param {function} props.dispatch
  * @constructor
  */
-const ExpenseList = ({expenses, dispatch}) => (
+export const ExpenseList = ({expenses, dispatch}) => (
   <div>
-    <h1>Expense List</h1>
     {
-      expenses.map(
-        (expense, index) =>
-          <ExpenseListItem
-            key={expense.id}
-            index={index + 1}
-            expense={expense}
-          />)
+      expenses.length === 0 ?
+        <p>
+          No expenses found.
+        </p>
+        :
+        expenses.map(
+          (expense, index) =>
+            <ExpenseListItem
+              key={expense.id}
+              index={index + 1}
+              expense={expense}
+            />)
     }
   </div>
 );
