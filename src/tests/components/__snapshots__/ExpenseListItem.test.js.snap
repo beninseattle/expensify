@@ -17,7 +17,7 @@ exports[`should render ExpenseListItem with an expense 1`] = `
     )
   </p>
   <withRouter(theButton)
-    path="edit/1"
+    path="/edit/1"
     title="Edit"
   />
 </div>

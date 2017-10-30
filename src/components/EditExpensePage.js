@@ -3,48 +3,53 @@ import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import ExpenseForm from './ExpenseForm';
 import {editExpense, deleteExpense} from "../store/actions/expenses";
+import paths from '../routers/paths';
 
 /**
- * @param {Object} props
+ * @property {Object} props
  * @property {Expense} props.expense
- * @property {function(expenseAction)} props.dispatch
+ * @property {function(Expense)} props.editExpense
+ * @property {function(Expense)} props.deleteExpense
  * @property {Object} props.history
  * @property {function(string)} props.history.push
  * @property {function(string)} props.history.redirect
- * @class
  */
-const EditExpensePage = ({dispatch, expense, history}) => {
+export class EditExpensePage extends React.Component {
   /**
    * @callback onSubmitExpenseCallback
    * @param {Expense} expense
    */
-  const onSubmitExpense = (expense) => {
-    dispatch(editExpense(expense));
-    history.push('/');
+  onSubmit = (expense) => {
+    this.props.editExpense(expense);
+    this.props.history.push(paths.dashboard);
   };
-  const onDeleteExpense = () => {
-    dispatch(deleteExpense(expense));
-    history.push('/');
+  /**
+   * @callback onDeleteExpenseCallback
+   */
+  onDelete = () => {
+    this.props.deleteExpense(this.props.expense);
+    this.props.history.push(paths.dashboard);
   };
 
-  if( expense === undefined ) {
+  render() {
+    if( this.props.expense === undefined ) {
+      return (
+        <Redirect to={paths.dashboard} />
+      );
+    }
+
     return (
-      <Redirect to="/" />
+      <div>
+        <ExpenseForm
+          expense={this.props.expense}
+          onSubmit={this.onSubmit}
+        />
+        <button onClick={this.onDelete}>delete
+        </button>
+      </div>
     );
   }
-
-  return (
-    <div>
-      <ExpenseForm
-        expense={expense}
-        onSubmit={onSubmitExpense}
-      />
-      <button onClick={onDeleteExpense}>delete
-      </button>
-    </div>
-  );
-};
-
+}
 /**
  *
  * @param {Object} state
@@ -53,9 +58,18 @@ const EditExpensePage = ({dispatch, expense, history}) => {
  * @property {string} props.match.params.id
  * @returns {{expense: T}}
  */
-const mapStateToProps = (state, props) => {
-  return {
-    expense: state.expenses.find((expense) => expense.equals(props.match.params.id))
-  };
-};
-export default connect(mapStateToProps)(EditExpensePage);
+const mapStateToProps = (state, props) => ({
+  expense: state.expenses.find((expense) => expense.equals(props.match.params.id))
+});
+/**
+ * @callback
+ * @param {function(expenseAction)} dispatch
+ * @returns {{addExpense: (function(Expense)), deleteExpense: (function(Expense))}}
+ */
+
+const mapDispatchToProps = (dispatch) => ({
+  editExpense: (expense) => dispatch(editExpense(expense)),
+  deleteExpense: (expense) => dispatch(deleteExpense(expense))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditExpensePage);

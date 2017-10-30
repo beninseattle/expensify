@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should redirect when no expense given 1`] = `
+<Redirect
+  push={false}
+  to="/"
+/>
+`;
+
+exports[`should render EditExpensePage correctly 1`] = `
+<div>
+  <ExpenseForm
+    expense={
+      Expense {
+        "amount": 1000,
+        "createdAt": 1483228800000,
+        "description": "abc",
+        "id": "1",
+        "note": "",
+      }
+    }
+    onSubmit={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    delete
+  </button>
+</div>
+`;

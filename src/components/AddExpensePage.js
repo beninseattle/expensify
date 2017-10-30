@@ -2,30 +2,42 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import {addExpense} from '../store/actions/expenses';
+import paths from '../routers/paths';
 
 /**
- * @param {Object} props
- * @property {function(expenseAction)} props.dispatch
- * @property {function(string)} props.history
+ * @property {Object} props
+ * @property {mapDispatchToProps} props.onSubmit
+ * @property {Object} props.history
  * @property {function(string)} props.history.push
- * @class
  */
-const AddExpensePage = ({dispatch, history}) => {
+export class AddExpensePage extends React.Component {
   /**
    * @callback onSubmitExpenseCallback
-   * @param {Expense} expense
+   * @param expense
    */
-  const onSubmitExpense = (expense) => {
-    dispatch(addExpense(expense));
-    history.push('/');
+  onSubmit = (expense) => {
+    this.props.addExpense(expense);
+    this.props.history.push(paths.dashboard);
   };
 
-  return (
-    <div>
-      <ExpenseForm onSubmit={onSubmitExpense}/>
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <h1>Add Expense</h1>
+        <ExpenseForm onSubmit={this.onSubmit}/>
+      </div>
+    );
+  }
+}
+
+/**
+ * @callback
+ * @param {function(expenseAction)} dispatch
+ * @returns {{addExpense: (function(Expense): *)}}
+ */
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addExpense: (expense) => dispatch(addExpense(expense))
+  };
 };
-
-
-export default connect()(AddExpensePage);
+export default connect(undefined, mapDispatchToProps)(AddExpensePage);
