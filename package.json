@@ -55,9 +55,11 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start:dev": "node scripts/start.js",
+    "start": "node scripts/server.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "heroku-postbuild": "npm run build"
   },
   "jest": {
     "collectCoverageFrom": [
