@@ -84,8 +84,8 @@ test('should handle date focus changes', () => {
   wrapper = shallow(
     <ExpenseListFilter {...{setTextFilter, setStartDate, setStopDate, sortByDate, sortByAmount, filters}}/>
   );
-  wrapper.find('withStyles(DateRangePicker)').prop('onFocusChange')({startDate: focused});
-  expect(wrapper.state('calendarFocused')).toEqual({startDate: focused});
+  wrapper.find('withStyles(DateRangePicker)').prop('onFocusChange')("startDate");
+  expect(wrapper.state('calendarFocused')).toEqual("startDate");
 });
 
 // test('should handle editExpense', () => {

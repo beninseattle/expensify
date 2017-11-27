@@ -71,6 +71,15 @@ export default class Expense {
    * @returns {string}
    */
   createdAtDateString(){
-    return new Date(this.createdAt).toLocaleString();
+    const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+    return new Date(this.createdAt).toLocaleString('en-US', options);
+  }
+
+  /**
+   * @returns {string}
+   */
+  createdAtDateTimeString(){
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    return new Date(this.createdAt).toLocaleString('en-US', options);
   }
 }
