@@ -5,7 +5,9 @@ import raf from './rAFshim';
 import moment from 'moment';
 import Enzyme  from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import DotEnv from 'dotenv';
 
 Enzyme.configure({ adapter: new Adapter() });
 
+DotEnv.config({ path: '.env.test' });
 Date.now = jest.fn(() => new Date(Date.UTC(2017, 0, 1)).valueOf());

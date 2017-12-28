@@ -82,4 +82,27 @@ export default class Expense {
     const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
     return new Date(this.createdAt).toLocaleString('en-US', options);
   }
+
+  /**
+   * Return data for saving to store
+   *
+   * @returns {{description: *, note: *, amount: *, createdAt: *}}
+   */
+  dataForSave(){
+    return {
+      description: this.description,
+      note: this.note,
+      amount: this.amount,
+      createdAt: this.createdAt
+    };
+  }
+
+  /**
+   * Called when saved to store with a proper id/key
+   *
+   * @param {string} newId
+   */
+  saveToStore(newId ){
+    this.id = newId;
+  }
 }

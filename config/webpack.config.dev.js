@@ -12,6 +12,13 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+if( process.env.NODE_ENV === 'test' ){
+  require('dotenv').config({ path: '.env.test' });
+} else if( process.env.NODE_ENV === 'development' ){
+  require('dotenv').config({ path: '.env.development' });
+}
+
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
 const publicPath = '/';

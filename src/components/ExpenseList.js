@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import ExpenseListHeader from './ExpenseListHeader';
 import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../store/selectors/expenses';
-import selectExpensesTotal from '../store/selectors/expenses-total';
 
 /**
  * @param {Object} props
