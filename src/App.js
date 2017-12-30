@@ -4,49 +4,35 @@ import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import AppRouter from './routers/AppRouter';
 import {Provider} from 'react-redux';
-import Expense from './models/expense';
 
-import {addExpense} from './store/actions/expenses';
+import {startSetExpenses} from './store/actions/expenses';
 import configureStore from './store/configureStore';
 
-const App = () => {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {loading: true};
 
-  const store = configureStore();
+    this.store = configureStore();
+    this.store.dispatch(startSetExpenses()).then(() => {
+      console.log('loading complete');
+      this.setState({loading: false});
+    });
+  }
 
-  store.dispatch(
-    addExpense(
-      new Expense({
-        description: 'Rent for August',
-        note: 'Rent',
-        amount: 100000
-      })));
-  setTimeout(() => store.dispatch(
-    addExpense(
-      new Expense({
-        description: 'Internet service for August',
-        note: 'Utility',
-        amount: 5000
-      }))), 1500);
-  setTimeout(() => store.dispatch(
-    addExpense(
-      new Expense({
-        description: 'Coffee',
-        note: 'Mmmm',
-        amount: 565
-      }))), 3000);
-  setTimeout(() => store.dispatch(
-    addExpense(
-      new Expense({
-        description: 'Car Payment',
-        note: 'Loan',
-        amount: 40000
-      }))), 4500);
-
-  return (
-    <Provider store={store}>
-      <AppRouter/>
-    </Provider>
-  );
-};
+  render() {
+    if( this.state.loading ){
+      return (
+        <p>Loading...</p>
+      );
+    } else {
+      return (
+        <Provider store={this.store}>
+          <AppRouter/>
+        </Provider>
+      );
+    }
+  }
+}
 
 export default App;

@@ -102,7 +102,7 @@ export default class Expense {
    *
    * @param {string} newId
    */
-  saveToStore(newId ){
+  saveToStore( newId ){
     this.id = newId;
   }
 }

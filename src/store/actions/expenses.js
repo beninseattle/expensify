@@ -1,4 +1,5 @@
 import database from '../../firebase/firebase';
+import Expense from '../../models/expense';
 
 /**
  * @callback expenseAction
@@ -41,3 +42,27 @@ export const editExpense = (expense) => ({
   type: 'EDIT_EXPENSE',
   expense
 });
+
+/**
+ * @callback setExpenses
+ */
+export const setExpenses = (expenses) => ({
+  type: 'SET_EXPENSES',
+  expenses
+});
+
+export const startSetExpenses = () => {
+  return (dispatch) => {
+    return database.ref('expenses').once('value').then((snapshot) => {
+      const expenses = [];
+      snapshot.forEach((childSnapshot) => {
+        expenses.push( new Expense({
+          id: childSnapshot.key,
+          ...childSnapshot.val()
+        }));
+      });
+
+      dispatch(setExpenses(expenses));
+    });
+  };
+};

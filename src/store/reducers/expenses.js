@@ -2,7 +2,6 @@ const expensesReducerDefaultState = [];
 export const expensesReducer = (state = expensesReducerDefaultState, action) => {
   switch (action.type) {
     case 'ADD_EXPENSE':
-      // TODO: Enforce unique IDs?
       return [...state, action.expense];
 
     case 'DELETE_EXPENSE':
@@ -16,6 +15,10 @@ export const expensesReducer = (state = expensesReducerDefaultState, action) => 
           return expense;
         }
       });
+
+    case 'SET_EXPENSES':
+      return action.expenses;
+
     default:
       return state;
   }
