@@ -24,6 +24,7 @@ export default class ExpenseForm extends Component {
     newExpense.note = e.target.value;
     this.setState(() => ({expense: newExpense}));
   };
+  // TODO: Fix this input
   onAmountChange = (e) => {
     const amount = e.target.value;
     if (!amount || amount.match(/^\d+(\.\d{0,2})?$/)) {

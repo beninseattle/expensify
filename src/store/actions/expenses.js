@@ -34,6 +34,18 @@ export const deleteExpense = (expense) => ({
   expense
 });
 
+export const startDeleteExpense = (expense) => {
+  return (dispatch) => {
+    return database.ref(`expenses/${expense.id}`).remove()
+      .then(() => {
+        dispatch(deleteExpense(expense));
+      })
+      .catch((error) => {
+        console.log(`Delete for expense ${expense.id} failed: ${error}`);
+      });
+  };
+};
+
 /**
  * @callback expenseAction
  * @param {Expense} expense - object with 1 or more of the fields of an expense
@@ -56,7 +68,7 @@ export const startSetExpenses = () => {
     return database.ref('expenses').once('value').then((snapshot) => {
       const expenses = [];
       snapshot.forEach((childSnapshot) => {
-        expenses.push( new Expense({
+        expenses.push(new Expense({
           id: childSnapshot.key,
           ...childSnapshot.val()
         }));
