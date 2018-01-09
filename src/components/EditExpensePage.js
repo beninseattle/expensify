@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import ExpenseForm from './ExpenseForm';
-import {editExpense, startDeleteExpense} from "../store/actions/expenses";
+import {startEditExpense, startDeleteExpense} from "../store/actions/expenses";
 import paths from '../routers/paths';
 
 /**
@@ -68,7 +68,7 @@ const mapStateToProps = (state, props) => ({
  */
 
 const mapDispatchToProps = (dispatch) => ({
-  editExpense: (expense) => dispatch(editExpense(expense)),
+  editExpense: (expense) => dispatch(startEditExpense(expense)),
   deleteExpense: (expense) => dispatch(startDeleteExpense(expense))
 });
 

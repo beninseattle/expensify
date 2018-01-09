@@ -18,10 +18,14 @@ export const addExpense = (expense) => ({
 export const startAddExpense = (expense) => {
   // function functionality thanks to redux-thunk
   return (dispatch) => {
-    return database.ref('expenses').push(expense.dataForSave()).then((ref) => {
-      expense.saveToStore(ref.key);
-      dispatch(addExpense(expense));
-    });
+    return database.ref('expenses').push(expense.dataForSave())
+      .then((ref) => {
+        expense.saveToStore(ref.key);
+        dispatch(addExpense(expense));
+      })
+      .catch((error) => {
+        console.log(`Add expense for expense ${expense.id} failed: ${error}`);
+      });
   };
 };
 
@@ -55,6 +59,18 @@ export const editExpense = (expense) => ({
   expense
 });
 
+export const startEditExpense = (expense) => {
+  return (dispatch) => {
+    return database.ref(`expenses/${expense.id}`).set(expense.dataForSave())
+      .then(() => {
+        dispatch(editExpense(expense));
+      })
+      .catch((error) => {
+        console.log(`Edit for expense ${expense.id} failed: ${error}`);
+      });
+  };
+};
+
 /**
  * @callback setExpenses
  */
@@ -65,16 +81,20 @@ export const setExpenses = (expenses) => ({
 
 export const startSetExpenses = () => {
   return (dispatch) => {
-    return database.ref('expenses').once('value').then((snapshot) => {
-      const expenses = [];
-      snapshot.forEach((childSnapshot) => {
-        expenses.push(new Expense({
-          id: childSnapshot.key,
-          ...childSnapshot.val()
-        }));
-      });
+    return database.ref('expenses').once('value')
+      .then((snapshot) => {
+        const expenses = [];
+        snapshot.forEach((childSnapshot) => {
+          expenses.push(new Expense({
+            id: childSnapshot.key,
+            ...childSnapshot.val()
+          }));
+        });
 
-      dispatch(setExpenses(expenses));
-    });
+        dispatch(setExpenses(expenses));
+      })
+      .catch((error) => {
+        console.log(`Set expenses failed to load data: ${error}`);
+      });
   };
 };

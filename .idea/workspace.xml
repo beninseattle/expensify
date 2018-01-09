@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbeec6c5-d7cc-4163-9db2-166a03fc8e1e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/components/EditExpensePage.js" afterPath="$PROJECT_DIR$/src/components/EditExpensePage.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/ExpenseForm.js" afterPath="$PROJECT_DIR$/src/components/ExpenseForm.js" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/expenses.js" afterPath="$PROJECT_DIR$/src/store/actions/expenses.js" />
       <change beforePath="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" afterPath="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
     </list>
@@ -38,8 +36,8 @@
               <file leaf-file-name="expenses.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/store/actions/expenses.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="435">
-                      <caret line="29" column="65" lean-forward="true" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
+                    <state relative-caret-position="908">
+                      <caret line="96" column="66" lean-forward="false" selection-start-line="96" selection-start-column="66" selection-end-line="96" selection-end-column="66" />
                       <folding>
                         <element signature="e#0#47#0" expanded="true" />
                       </folding>
@@ -50,8 +48,8 @@
               <file leaf-file-name="EditExpensePage.js" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/components/EditExpensePage.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="509">
-                      <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+                    <state relative-caret-position="368">
+                      <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
                       <folding>
                         <element signature="e#0#26#0" expanded="true" />
                       </folding>
@@ -142,8 +140,8 @@
               <file leaf-file-name="expenses.test.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/tests/store/actions/expenses.test.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="602">
-                      <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+                    <state relative-caret-position="744">
+                      <caret line="105" column="46" lean-forward="true" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="46" />
                       <folding>
                         <element signature="e#0#50#0" expanded="true" />
                       </folding>
@@ -242,10 +240,10 @@
         <option value="$PROJECT_DIR$/src/store/reducers/expenses.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/models/expense.js" />
-        <option value="$PROJECT_DIR$/src/store/actions/expenses.js" />
+        <option value="$PROJECT_DIR$/src/components/ExpenseForm.js" />
         <option value="$PROJECT_DIR$/src/components/EditExpensePage.js" />
         <option value="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
-        <option value="$PROJECT_DIR$/src/components/ExpenseForm.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/expenses.js" />
       </list>
     </option>
   </component>
@@ -490,7 +488,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.should delete an expense from firebase">
+  <component name="RunManager" selected="Jest.should edit an expense in firebase">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -536,6 +534,17 @@
       <test-file value="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
       <test-names>
         <test-name value="should delete an expense from firebase" />
+      </test-names>
+    </configuration>
+    <configuration name="should edit an expense in firebase" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
+      <test-names>
+        <test-name value="should edit an expense in firebase" />
       </test-names>
     </configuration>
     <configuration name="should fetch the expenses from firebase" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
@@ -599,33 +608,24 @@
       <node-interpreter value="project" />
       <envs />
     </configuration>
-    <configuration name="start:dev" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-    </configuration>
     <list size="9">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Debug" />
       <item index="1" class="java.lang.String" itemvalue="Jest.Test" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.Nodejs debug" />
       <item index="3" class="java.lang.String" itemvalue="npm.Run" />
-      <item index="4" class="java.lang.String" itemvalue="npm.start:dev" />
-      <item index="5" class="java.lang.String" itemvalue="Jest.should fetch the expenses from firebase" />
-      <item index="6" class="java.lang.String" itemvalue="Jest.expenses.test.js" />
-      <item index="7" class="java.lang.String" itemvalue="Jest.should delete an expense from firebase" />
-      <item index="8" class="java.lang.String" itemvalue="Jest.should setup delete expense action object" />
+      <item index="4" class="java.lang.String" itemvalue="Jest.should fetch the expenses from firebase" />
+      <item index="5" class="java.lang.String" itemvalue="Jest.expenses.test.js" />
+      <item index="6" class="java.lang.String" itemvalue="Jest.should delete an expense from firebase" />
+      <item index="7" class="java.lang.String" itemvalue="Jest.should setup delete expense action object" />
+      <item index="8" class="java.lang.String" itemvalue="Jest.should edit an expense in firebase" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Jest.should delete an expense from firebase" />
-        <item index="1" class="java.lang.String" itemvalue="Jest.should setup delete expense action object" />
-        <item index="2" class="java.lang.String" itemvalue="Jest.expenses.test.js" />
-        <item index="3" class="java.lang.String" itemvalue="Jest.should fetch the expenses from firebase" />
-        <item index="4" class="java.lang.String" itemvalue="npm.start:dev" />
+        <item index="0" class="java.lang.String" itemvalue="Jest.should edit an expense in firebase" />
+        <item index="1" class="java.lang.String" itemvalue="Jest.should delete an expense from firebase" />
+        <item index="2" class="java.lang.String" itemvalue="Jest.should setup delete expense action object" />
+        <item index="3" class="java.lang.String" itemvalue="Jest.expenses.test.js" />
+        <item index="4" class="java.lang.String" itemvalue="Jest.should fetch the expenses from firebase" />
       </list>
     </recent_temporary>
   </component>
@@ -653,7 +653,7 @@
       <workItem from="1513292957342" duration="738000" />
       <workItem from="1513478102824" duration="1418000" />
       <workItem from="1513570378986" duration="2589000" />
-      <workItem from="1514422056736" duration="21923000" />
+      <workItem from="1514422056736" duration="22965000" />
     </task>
     <servers />
   </component>
@@ -676,8 +676,8 @@
     <history-entry file="should_delete_an_expense_from_firebase - 2018.01.09 at 09h 40m 47s.xml">
       <configuration name="should delete an expense from firebase" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="should_fetch_the_expenses_from_firebase - 2018.01.08 at 15h 22m 32s.xml">
-      <configuration name="should fetch the expenses from firebase" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="should_edit_an_expense_in_firebase - 2018.01.09 at 09h 59m 47s.xml">
+      <configuration name="should edit an expense in firebase" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
     <history-entry file="should_fetch_the_expenses_from_firebase - 2018.01.08 at 15h 29m 32s.xml">
       <configuration name="should fetch the expenses from firebase" configurationId="JavaScriptTestRunnerJest" />
@@ -690,7 +690,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173666000" />
+    <option name="totallyTimeSpent" value="174708000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -708,7 +708,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33367452" sideWeight="0.502442" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29467833" sideWeight="0.82171583" order="6" side_tool="false" content_ui="tabs" x="95" y="429" width="1492" height="208" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22954726" sideWeight="0.82171583" order="6" side_tool="false" content_ui="tabs" x="95" y="429" width="1492" height="208" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16759333" sideWeight="0.17828418" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43447182" sideWeight="0.7580429" order="7" side_tool="false" content_ui="tabs" />
@@ -814,13 +814,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/filters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1163,26 +1156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EditExpensePage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/expenses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="65" lean-forward="true" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/components/EditExpensePage.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -1209,12 +1182,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/store/actions/expenses.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+        <state relative-caret-position="744">
+          <caret line="105" column="46" lean-forward="true" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="46" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditExpensePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/expenses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="908">
+          <caret line="96" column="66" lean-forward="false" selection-start-line="96" selection-start-column="66" selection-end-line="96" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
