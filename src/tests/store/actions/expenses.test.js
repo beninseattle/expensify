@@ -10,7 +10,7 @@ import {
   setExpenses,
   startSetExpenses, startEditExpense
 } from "../../../store/actions/expenses";
-import expenses from '../../fixtures/expenses';
+import expensesFixture from '../../fixtures/expenses';
 import database from '../../../firebase/firebase';
 import {expensesReducer} from "../../../store/reducers/expenses";
 
@@ -18,11 +18,18 @@ import {expensesReducer} from "../../../store/reducers/expenses";
  * @property {function()} dispatch
  */
 const createMockStore = configureMockStore([thunk]);
+let expenses = [];
+let expensesData = {};
 
+/**
+ * As we may modify the objects, we need to make fresh copies for each test
+ */
 beforeEach(() => {
-  let expensesData = {};
-  expenses.forEach(({id, description, amount, createdAt}) => {
-    expensesData[id] = {description, amount, createdAt};
+  expenses = [];
+  expensesData = {};
+  expensesFixture.forEach((expense) => {
+    expensesData[expense.id] = expense.dataForSave();
+    expenses.push(new Expense(expense));
   });
   database.ref('expenses').set(expensesData).then(() => done());
 });
@@ -115,8 +122,8 @@ test('should setup set expense action object with data', () => {
     expenses
   })
 });
-test('' +
-  'should set expenses', () => {
+
+test('should set expenses', () => {
   const action = {
     type: 'SET_EXPENSES',
     expenses: [expenses[1]]

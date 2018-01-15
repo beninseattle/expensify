@@ -1,5 +1,6 @@
 const paths = {
-  dashboard: '/',
+  login: '/',
+  dashboard: '/dashboard',
   addExpense: '/create',
   editExpense: '/edit/',
   help: '/help'

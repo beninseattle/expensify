@@ -1,7 +1,7 @@
 import moment from 'moment';
 import Expense from "../../models/expense";
 
-const expenses = [
+const expensesFixture = [
   new Expense({
     id: '1',
     description: 'abc',
@@ -28,4 +28,4 @@ const expenses = [
   })
 ];
 
-export default expenses;
+export default expensesFixture;

@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbeec6c5-d7cc-4163-9db2-166a03fc8e1e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/EditExpensePage.js" afterPath="$PROJECT_DIR$/src/components/EditExpensePage.js" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/expenses.js" afterPath="$PROJECT_DIR$/src/store/actions/expenses.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/LoginPage.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/routers/PrivateRoute.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/store/actions/auth.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/store/reducers/auth.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/tests/components/LoginPage.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/tests/components/__snapshots__/LoginPage.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/tests/store/actions/auth.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/tests/store/reducers/auth.test.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" afterPath="$PROJECT_DIR$/src/components/Header.js" />
+      <change beforePath="$PROJECT_DIR$/src/firebase/firebase.js" afterPath="$PROJECT_DIR$/src/firebase/firebase.js" />
+      <change beforePath="$PROJECT_DIR$/src/routers/AppRouter.js" afterPath="$PROJECT_DIR$/src/routers/AppRouter.js" />
+      <change beforePath="$PROJECT_DIR$/src/routers/paths.js" afterPath="$PROJECT_DIR$/src/routers/paths.js" />
+      <change beforePath="$PROJECT_DIR$/src/store/configureStore.js" afterPath="$PROJECT_DIR$/src/store/configureStore.js" />
+      <change beforePath="$PROJECT_DIR$/src/tests/components/Header.test.js" afterPath="$PROJECT_DIR$/src/tests/components/Header.test.js" />
+      <change beforePath="$PROJECT_DIR$/src/tests/components/__snapshots__/EditExpensePage.test.js.snap" afterPath="$PROJECT_DIR$/src/tests/components/__snapshots__/EditExpensePage.test.js.snap" />
+      <change beforePath="$PROJECT_DIR$/src/tests/components/__snapshots__/Header.test.js.snap" afterPath="$PROJECT_DIR$/src/tests/components/__snapshots__/Header.test.js.snap" />
+      <change beforePath="$PROJECT_DIR$/src/tests/fixtures/expenses.js" afterPath="$PROJECT_DIR$/src/tests/fixtures/expenses.js" />
       <change beforePath="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" afterPath="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,36 +41,24 @@
         <splitter split-orientation="horizontal" split-proportion="0.5">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="expense.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/models/expense.js">
+              <file leaf-file-name="LoginPage.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/components/LoginPage.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="258">
-                      <caret line="51" column="12" lean-forward="true" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="expenses.js" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/store/actions/expenses.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="908">
-                      <caret line="96" column="66" lean-forward="false" selection-start-line="96" selection-start-column="66" selection-end-line="96" selection-end-column="66" />
-                      <folding>
-                        <element signature="e#0#47#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="EditExpensePage.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/components/EditExpensePage.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="368">
-                      <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+                    <state relative-caret-position="285">
+                      <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
                       <folding>
                         <element signature="e#0#26#0" expanded="true" />
                       </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/store/reducers/auth.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="165">
+                      <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+                      <folding />
                     </state>
                   </provider>
                 </entry>
@@ -67,56 +73,24 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="AddExpensePage.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/components/AddExpensePage.js">
+              <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/store/actions/auth.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="285">
-                      <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+                    <state relative-caret-position="165">
+                      <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="Header.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/components/Header.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="360">
+                      <caret line="24" column="57" lean-forward="true" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
                       <folding>
                         <element signature="e#0#26#0" expanded="true" />
                       </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="ExpenseList.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/components/ExpenseList.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="375">
-                      <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="AppRouter.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/routers/AppRouter.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="0">
-                      <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                      <folding>
-                        <element signature="e#0#26#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="paths.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/routers/paths.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="0">
-                      <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="expenses.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/store/selectors/expenses.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="240">
-                      <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-                      <folding />
                     </state>
                   </provider>
                 </entry>
@@ -124,8 +98,42 @@
               <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/App.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="240">
-                      <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+                    <state relative-caret-position="285">
+                      <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+                      <folding>
+                        <element signature="e#0#26#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="AppRouter.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/routers/AppRouter.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="255">
+                      <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                      <folding>
+                        <element signature="e#0#26#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="EditExpensePage.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/components/EditExpensePage.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="402">
+                      <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="ExpenseListItem.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/components/ExpenseListItem.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="285">
+                      <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
                       <folding>
                         <element signature="e#0#26#0" expanded="true" />
                       </folding>
@@ -137,14 +145,70 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="expenses.test.js" pinned="false" current-in-tab="true">
+              <file leaf-file-name="expenses.test.js" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/tests/store/actions/expenses.test.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="744">
-                      <caret line="105" column="46" lean-forward="true" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="46" />
+                    <state relative-caret-position="840">
+                      <caret line="56" column="75" lean-forward="true" selection-start-line="56" selection-start-column="75" selection-end-line="56" selection-end-column="75" />
                       <folding>
                         <element signature="e#0#50#0" expanded="true" />
                       </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="Header.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/components/Header.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="360">
+                      <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+                      <folding>
+                        <element signature="e#0#26#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="LoginPage.test.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/tests/components/LoginPage.test.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="210">
+                      <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+                      <folding>
+                        <element signature="e#0#26#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="auth.test.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/tests/store/actions/auth.test.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="240">
+                      <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="PrivateRoute.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/routers/PrivateRoute.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="240">
+                      <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+                      <folding>
+                        <element signature="e#0#26#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="auth.test.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/tests/store/reducers/auth.test.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="255">
+                      <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+                      <folding />
                     </state>
                   </provider>
                 </entry>
@@ -158,8 +222,8 @@
           <file leaf-file-name="expenses.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/tests/fixtures/expenses.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="10" selection-end-column="15" />
+                <state relative-caret-position="135">
+                  <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
@@ -193,25 +257,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tests/components/PageNotFound.test.js" />
-        <option value="$PROJECT_DIR$/src/tests/components/DashboardPage.test.js" />
-        <option value="$PROJECT_DIR$/src/tests/components/ExpenseListItem.test.js" />
-        <option value="$PROJECT_DIR$/src/tests/components/__snapshots__/ExpenseForm.test.js.snap" />
-        <option value="$PROJECT_DIR$/src/tests/__mocks__/moment.js" />
-        <option value="$PROJECT_DIR$/src/tests/components/__mocks__/moment.js" />
-        <option value="$PROJECT_DIR$/src/tests/store/reducers/filters.test.js" />
         <option value="$PROJECT_DIR$/src/tests/App.test.js" />
-        <option value="$PROJECT_DIR$/src/tests/fixtures/expenses.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/filters.js" />
         <option value="internal/inspector_async_hook.js" />
         <option value="module.js" />
         <option value="$PROJECT_DIR$/src/tests/store/selectors/expenses.test.js" />
-        <option value="$PROJECT_DIR$/src/routers/paths.js" />
         <option value="$PROJECT_DIR$/src/components/ExpenseListItem.js" />
-        <option value="$PROJECT_DIR$/src/components/Header.js" />
-        <option value="$PROJECT_DIR$/src/routers/AppRouter.js" />
         <option value="$PROJECT_DIR$/src/tests/components/EditExpensePage.test.js" />
-        <option value="$PROJECT_DIR$/src/tests/components/Header.test.js" />
         <option value="$PROJECT_DIR$/src/tests/components/ExpenseListFilters.test.js" />
         <option value="$PROJECT_DIR$/src/tests/fixtures/filters.js" />
         <option value="$PROJECT_DIR$/src/components/ExpenseListFilter.js" />
@@ -225,7 +277,6 @@
         <option value="$PROJECT_DIR$/src/components/ExpenseListHeader.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/ExpenseList.js" />
-        <option value="$PROJECT_DIR$/src/store/configureStore.js" />
         <option value="$PROJECT_DIR$/src/firebase/firebase_init.js" />
         <option value="$PROJECT_DIR$/src/components/AddExpensePage.js" />
         <option value="$PROJECT_DIR$/src/tests/components/AddExpensePage.test.js" />
@@ -236,14 +287,27 @@
         <option value="$PROJECT_DIR$/config/env.js" />
         <option value="$PROJECT_DIR$/.env.test" />
         <option value="$PROJECT_DIR$/.env.development" />
-        <option value="$PROJECT_DIR$/src/firebase/firebase.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/expenses.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/models/expense.js" />
         <option value="$PROJECT_DIR$/src/components/ExpenseForm.js" />
         <option value="$PROJECT_DIR$/src/components/EditExpensePage.js" />
-        <option value="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
         <option value="$PROJECT_DIR$/src/store/actions/expenses.js" />
+        <option value="$PROJECT_DIR$/src/routers/paths.js" />
+        <option value="$PROJECT_DIR$/src/firebase/firebase.js" />
+        <option value="$PROJECT_DIR$/src/tests/components/Header.test.js" />
+        <option value="$PROJECT_DIR$/src/tests/components/LoginPage.test.js" />
+        <option value="$PROJECT_DIR$/src/tests/fixtures/expenses.js" />
+        <option value="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
+        <option value="$PROJECT_DIR$/src/components/Header.js" />
+        <option value="$PROJECT_DIR$/src/components/LoginPage.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/auth.js" />
+        <option value="$PROJECT_DIR$/src/store/configureStore.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/auth.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/tests/store/reducers/auth.test.js" />
+        <option value="$PROJECT_DIR$/src/tests/store/actions/auth.test.js" />
+        <option value="$PROJECT_DIR$/src/routers/AppRouter.js" />
+        <option value="$PROJECT_DIR$/src/routers/PrivateRoute.js" />
       </list>
     </option>
   </component>
@@ -408,6 +472,14 @@
               <item name="expensify" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="__snapshots__" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="expensify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expensify" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="fixtures" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -424,6 +496,14 @@
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
               <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="expensify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expensify" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="expensify" type="b2602c69:ProjectViewProjectNode" />
@@ -488,7 +568,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.should edit an expense in firebase">
+  <component name="RunManager" selected="Jest.auth.test.js (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -517,6 +597,22 @@
       <envs />
       <scope-kind value="ALL" />
     </configuration>
+    <configuration name="auth.test.js (1)" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/tests/store/actions/auth.test.js" />
+    </configuration>
+    <configuration name="auth.test.js" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/tests/store/reducers/auth.test.js" />
+    </configuration>
     <configuration name="expenses.test.js" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -525,18 +621,18 @@
       <scope-kind value="TEST_FILE" />
       <test-file value="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
     </configuration>
-    <configuration name="should delete an expense from firebase" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="should call startLogin on logout click" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
+      <test-file value="$PROJECT_DIR$/src/tests/components/LoginPage.test.js" />
       <test-names>
-        <test-name value="should delete an expense from firebase" />
+        <test-name value="should call startLogin on logout click" />
       </test-names>
     </configuration>
-    <configuration name="should edit an expense in firebase" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="should setup start add expense action" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <working-dir value="$PROJECT_DIR$" />
@@ -544,29 +640,7 @@
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
       <test-names>
-        <test-name value="should edit an expense in firebase" />
-      </test-names>
-    </configuration>
-    <configuration name="should fetch the expenses from firebase" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
-      <test-names>
-        <test-name value="should fetch the expenses from firebase" />
-      </test-names>
-    </configuration>
-    <configuration name="should setup delete expense action object" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/tests/store/actions/expenses.test.js" />
-      <test-names>
-        <test-name value="should setup delete expense action object" />
+        <test-name value="should setup start add expense action" />
       </test-names>
     </configuration>
     <configuration name="Debug" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:3000" />
@@ -613,19 +687,19 @@
       <item index="1" class="java.lang.String" itemvalue="Jest.Test" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.Nodejs debug" />
       <item index="3" class="java.lang.String" itemvalue="npm.Run" />
-      <item index="4" class="java.lang.String" itemvalue="Jest.should fetch the expenses from firebase" />
+      <item index="4" class="java.lang.String" itemvalue="Jest.should call startLogin on logout click" />
       <item index="5" class="java.lang.String" itemvalue="Jest.expenses.test.js" />
-      <item index="6" class="java.lang.String" itemvalue="Jest.should delete an expense from firebase" />
-      <item index="7" class="java.lang.String" itemvalue="Jest.should setup delete expense action object" />
-      <item index="8" class="java.lang.String" itemvalue="Jest.should edit an expense in firebase" />
+      <item index="6" class="java.lang.String" itemvalue="Jest.should setup start add expense action" />
+      <item index="7" class="java.lang.String" itemvalue="Jest.auth.test.js" />
+      <item index="8" class="java.lang.String" itemvalue="Jest.auth.test.js (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Jest.should edit an expense in firebase" />
-        <item index="1" class="java.lang.String" itemvalue="Jest.should delete an expense from firebase" />
-        <item index="2" class="java.lang.String" itemvalue="Jest.should setup delete expense action object" />
-        <item index="3" class="java.lang.String" itemvalue="Jest.expenses.test.js" />
-        <item index="4" class="java.lang.String" itemvalue="Jest.should fetch the expenses from firebase" />
+        <item index="0" class="java.lang.String" itemvalue="Jest.auth.test.js (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Jest.auth.test.js" />
+        <item index="2" class="java.lang.String" itemvalue="Jest.expenses.test.js" />
+        <item index="3" class="java.lang.String" itemvalue="Jest.should setup start add expense action" />
+        <item index="4" class="java.lang.String" itemvalue="Jest.should call startLogin on logout click" />
       </list>
     </recent_temporary>
   </component>
@@ -653,44 +727,44 @@
       <workItem from="1513292957342" duration="738000" />
       <workItem from="1513478102824" duration="1418000" />
       <workItem from="1513570378986" duration="2589000" />
-      <workItem from="1514422056736" duration="22965000" />
+      <workItem from="1514422056736" duration="33818000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test - 2018.01.08 at 15h 32m 41s.xml">
+    <history-entry file="Test - 2018.01.09 at 18h 38m 26s.xml">
       <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Test - 2018.01.09 at 09h 41m 55s.xml">
+    <history-entry file="Test - 2018.01.09 at 18h 45m 18s.xml">
       <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="expenses_test_js - 2018.01.08 at 15h 22m 47s.xml">
+    <history-entry file="auth_test_js - 2018.01.15 at 09h 58m 03s.xml">
+      <configuration name="auth.test.js" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="auth_test_js - 2018.01.15 at 09h 59m 45s.xml">
+      <configuration name="auth.test.js" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="auth_test_js_(1) - 2018.01.15 at 10h 02m 36s.xml">
+      <configuration name="auth.test.js (1)" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="expenses_test_js - 2018.01.09 at 18h 36m 12s.xml">
       <configuration name="expenses.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="expenses_test_js - 2018.01.08 at 15h 32m 21s.xml">
+    <history-entry file="expenses_test_js - 2018.01.09 at 18h 37m 07s.xml">
       <configuration name="expenses.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="should_delete_an_expense_from_firebase - 2018.01.09 at 09h 39m 37s.xml">
-      <configuration name="should delete an expense from firebase" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="expenses_test_js - 2018.01.09 at 18h 37m 59s.xml">
+      <configuration name="expenses.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="should_delete_an_expense_from_firebase - 2018.01.09 at 09h 40m 47s.xml">
-      <configuration name="should delete an expense from firebase" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="expenses_test_js - 2018.01.09 at 18h 38m 12s.xml">
+      <configuration name="expenses.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="should_edit_an_expense_in_firebase - 2018.01.09 at 09h 59m 47s.xml">
-      <configuration name="should edit an expense in firebase" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="should_fetch_the_expenses_from_firebase - 2018.01.08 at 15h 29m 32s.xml">
-      <configuration name="should fetch the expenses from firebase" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="should_fetch_the_expenses_from_firebase - 2018.01.08 at 15h 32m 12s.xml">
-      <configuration name="should fetch the expenses from firebase" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="should_setup_delete_expense_action_object - 2018.01.09 at 09h 40m 40s.xml">
-      <configuration name="should setup delete expense action object" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="should_setup_start_add_expense_action - 2018.01.09 at 18h 37m 48s.xml">
+      <configuration name="should setup start add expense action" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174708000" />
+    <option name="totallyTimeSpent" value="185561000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -708,10 +782,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33367452" sideWeight="0.502442" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22954726" sideWeight="0.82171583" order="6" side_tool="false" content_ui="tabs" x="95" y="429" width="1492" height="208" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20333599" sideWeight="0.82171583" order="6" side_tool="false" content_ui="tabs" x="95" y="429" width="1492" height="208" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16759333" sideWeight="0.17828418" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43447182" sideWeight="0.7580429" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33042097" sideWeight="0.7580429" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11675933" sideWeight="0.49232343" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -764,11 +838,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/tests/components/Header.test.js</url>
-          <line>6</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/node_modules/mockfirebase/browser/mockfirebase.js</url>
           <line>11629</line>
           <option name="timeStamp" value="29" />
@@ -788,7 +857,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -802,117 +871,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tests/components/ExpenseList.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/selectors/expenses-total.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/configureStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/components/ExpenseListItem.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/redux-mock-store/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/firebase-mock/src/index.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/mockfirebase/browser/mockfirebase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="11636" column="19" lean-forward="false" selection-start-line="11636" selection-start-column="19" selection-end-line="11636" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mockfirebase/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mockfirebase/src/firebase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jest-jasmine2/build/queueRunner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jsdom/lib/jsdom/browser/Window.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="513" column="34" lean-forward="false" selection-start-line="513" selection-start-column="34" selection-end-line="513" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/jest/cssTransform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/jest/fileTransform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="62" column="6" lean-forward="true" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/setupTests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="61" lean-forward="true" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#159#187#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1037,24 +995,8 @@
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/firebase/firebase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routers/paths.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,35 +1005,7 @@
         <state relative-caret-position="165">
           <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routers/AppRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ExpenseList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1100,14 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/expense.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="51" column="12" lean-forward="true" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1125,24 +1031,8 @@
         <state relative-caret-position="6">
           <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/fixtures/expenses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="10" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/expenses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,26 +1041,8 @@
         <state relative-caret-position="285">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/components/EditExpensePage.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ExpenseForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,32 +1062,252 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/store/actions/expenses.test.js">
+    <entry file="file://$PROJECT_DIR$/src/tests/components/__snapshots__/LoginPage.test.js.snap">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="105" column="46" lean-forward="true" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="46" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/expenses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="74" column="24" lean-forward="true" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EditExpensePage.js">
+    <entry file="file://$PROJECT_DIR$/src/firebase/firebase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="270">
+          <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/components/Header.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="3" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/expenses.js">
+    <entry file="file://$PROJECT_DIR$/src/tests/components/EditExpensePage.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="908">
-          <caret line="96" column="66" lean-forward="false" selection-start-line="96" selection-start-column="66" selection-end-line="96" selection-end-column="66" />
+        <state relative-caret-position="300">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/expense.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ExpenseForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-465">
+          <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ExpenseList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ExpenseListItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routers/paths.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditExpensePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/fixtures/expenses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/prop-types/lib/ReactPropTypesSecret.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/prop-types/prop-types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/prop-types/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/expenses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/configureStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/LoginPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/components/LoginPage.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/store/actions/expenses.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="75" lean-forward="true" selection-start-line="56" selection-start-column="75" selection-end-line="56" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/store/reducers/auth.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/store/actions/auth.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routers/AppRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routers/PrivateRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

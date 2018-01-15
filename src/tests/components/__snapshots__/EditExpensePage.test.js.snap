@@ -3,7 +3,7 @@
 exports[`should redirect when no expense given 1`] = `
 <Redirect
   push={false}
-  to="/"
+  to="/dashboard"
 />
 `;
 
