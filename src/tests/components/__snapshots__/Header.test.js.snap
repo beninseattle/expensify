@@ -12,10 +12,9 @@ exports[`should render Header correctly 1`] = `
       <NavLink
         activeClassName="is-active"
         ariaCurrent="true"
-        exact={true}
         to="/dashboard"
       >
-        Expensify
+        Dashboard
       </NavLink>
     </li>
     <li>
@@ -25,15 +24,6 @@ exports[`should render Header correctly 1`] = `
         to="/create"
       >
         Add Expense
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        activeClassName="is-active"
-        ariaCurrent="true"
-        to="/help"
-      >
-        Help
       </NavLink>
     </li>
     <button

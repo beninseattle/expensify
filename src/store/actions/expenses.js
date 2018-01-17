@@ -11,14 +11,15 @@ export const addExpense = (expense) => ({
 });
 
 /**
- *
+ * Returns function to start async action to add a new expense in Firebase and then dispatch to redux
  * @param {Expense} expense
- * @returns {function(*)}
+ * @returns {function(func,func)}
  */
 export const startAddExpense = (expense) => {
   // function functionality thanks to redux-thunk
-  return (dispatch) => {
-    return database.ref('expenses').push(expense.dataForSave())
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/expenses`).push(expense.dataForSave())
       .then((ref) => {
         expense.saveToStore(ref.key);
         dispatch(addExpense(expense));
@@ -38,9 +39,15 @@ export const deleteExpense = (expense) => ({
   expense
 });
 
+/**
+ * Returns function to start async action to delete a specific expense in Firebase and then dispatch to redux
+ * @param expense
+ * @returns {function(func, func)}
+ */
 export const startDeleteExpense = (expense) => {
-  return (dispatch) => {
-    return database.ref(`expenses/${expense.id}`).remove()
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/expenses/${expense.id}`).remove()
       .then(() => {
         dispatch(deleteExpense(expense));
       })
@@ -59,9 +66,15 @@ export const editExpense = (expense) => ({
   expense
 });
 
+/**
+ * Returns function to start async action to save a specific expense in Firebase and then dispatch to redux
+ * @param expense
+ * @returns {function(func, func)}
+ */
 export const startEditExpense = (expense) => {
-  return (dispatch) => {
-    return database.ref(`expenses/${expense.id}`).set(expense.dataForSave())
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/expenses/${expense.id}`).set(expense.dataForSave())
       .then(() => {
         dispatch(editExpense(expense));
       })
@@ -79,9 +92,14 @@ export const setExpenses = (expenses) => ({
   expenses
 });
 
+/**
+ * Returns function to start async action to load expenses from Firebase and then dispatch to redux
+ * @returns {function(func, func)}
+ */
 export const startSetExpenses = () => {
-  return (dispatch) => {
-    return database.ref('expenses').once('value')
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/expenses`).once('value')
       .then((snapshot) => {
         const expenses = [];
         snapshot.forEach((childSnapshot) => {
