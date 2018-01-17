@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ExpenseListHeader from './ExpenseListHeader';
 import ExpenseListItem from './ExpenseListItem';
+import ExpenseListFilter from './ExpenseListFilter';
 import selectExpenses from '../store/selectors/expenses';
 
 /**
@@ -20,6 +21,7 @@ export const ExpenseList = ({expenses}) => {
     return (
       <div>
         <ExpenseListHeader/>
+        <ExpenseListFilter/>
         { expenses.map(
               (expense, index) =>
                 <ExpenseListItem
