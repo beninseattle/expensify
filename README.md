@@ -1,7 +1,9 @@
 # expensify
-Project from Andrew Mead's React course on Udemy
+Project built working through [Andrew Mead's React course on Udemy](https://www.udemy.com/react-2nd-edition/learn/v4/content)
 
-Project copied from previous bootstrappped indecision app and then ejected to add SASS support. In the future, look into using [custom create react app script](https://medium.com/@kitze/configure-create-react-app-without-ejecting-d8450e96196a) that will allow adding additional support without ejecting from the create-react-app setup.
+[Example hosted on Heroku](https://beninseattle-expensify.herokuapp.com/)
+
+Project copied from previous bootstrappped indecision app and then ejected to add SASS support. TODO: In the future, look into using [custom create react app script](https://medium.com/@kitze/configure-create-react-app-without-ejecting-d8450e96196a) that will allow adding additional support without ejecting from the create-react-app setup.
 
 #
 
