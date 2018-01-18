@@ -11,24 +11,24 @@ import selectExpenses from '../store/selectors/expenses';
  * @constructor
  */
 export const ExpenseList = ({expenses}) => {
-  if( expenses.length === 0 ) {
+  if (expenses.length === 0) {
     return (
-      <p>
-        No expenses found.
-      </p>
+      <div>
+        <ExpenseListHeader/>
+      </div>
     );
   } else {
     return (
       <div>
         <ExpenseListHeader/>
         <ExpenseListFilter/>
-        { expenses.map(
-              (expense, index) =>
-                <ExpenseListItem
-                  key={expense.id}
-                  index={index + 1}
-                  expense={expense}
-                />)
+        {expenses.map(
+          (expense, index) =>
+            <ExpenseListItem
+              key={expense.id}
+              index={index + 1}
+              expense={expense}
+            />)
         }
       </div>
     );
