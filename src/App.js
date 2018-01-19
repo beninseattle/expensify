@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import {history} from './routers/AppRouter';
 import paths from './routers/paths';
+import LoadingPage from './components/LoadingPage';
 
 import {startSetExpenses} from './store/actions/expenses';
 import {login, logout} from './store/actions/auth';
@@ -41,7 +42,7 @@ class App extends React.Component {
   render() {
     if( this.state.loading ){
       return (
-        <p>Loading...</p>
+        <LoadingPage/>
       );
     } else {
       return (

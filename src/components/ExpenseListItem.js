@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import NavButton from './NavigationButton';
 import paths from '../routers/paths';
 
 /**
@@ -10,11 +9,13 @@ import paths from '../routers/paths';
  * @constructor
  */
 const ExpenseListItem = ({index, expense}) => (
-  <div>
-    <h3><Link to={paths.editExpense + expense.id}>{expense.description}</Link></h3>
-    <p>{expense.amountCurrencyString()} ({expense.createdAtDateString()})</p>
-    <NavButton path={paths.editExpense + expense.id} title="Edit"/>
-  </div>
+  <Link className="list-item" to={paths.editExpense + expense.id}>
+    <div>
+      <h3 className="list-item__title">{expense.description}</h3>
+      <span className="list-item__subtitle">({expense.createdAtDateString()})</span>
+    </div>
+    <h3 className="list-item__data">{expense.amountCurrencyString()}</h3>
+  </Link>
 );
 
 export default ExpenseListItem;
