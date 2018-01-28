@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseList with empty message 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item--message"
+    >
+      <span>
+        No expenses
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render ExpenseList with expenses 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <ExpenseListItem
+      expense={
+        Expense {
+          "amount": 1000,
+          "createdAt": 1483228800000,
+          "description": "abc",
+          "id": "1",
+          "note": "",
+        }
+      }
+      index={1}
+      key="1"
+    />
+    <ExpenseListItem
+      expense={
+        Expense {
+          "amount": 2000,
+          "createdAt": 1482883200000,
+          "description": "aaa",
+          "id": "2",
+          "note": "",
+        }
+      }
+      index={2}
+      key="2"
+    />
+    <ExpenseListItem
+      expense={
+        Expense {
+          "amount": 500,
+          "createdAt": 1483574400000,
+          "description": "def",
+          "id": "3",
+          "note": "",
+        }
+      }
+      index={3}
+      key="3"
+    />
+    <ExpenseListItem
+      expense={
+        Expense {
+          "amount": 1000,
+          "createdAt": 1483228800000,
+          "description": "zzz",
+          "id": "4",
+          "note": "",
+        }
+      }
+      index={4}
+      key="4"
+    />
+  </div>
+</div>
+`;

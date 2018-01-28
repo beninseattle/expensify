@@ -3,7 +3,7 @@ import {firebase, googleAuthProvider} from '../firebase/firebase';
 export default (() => {
   const demoEmail = 'demo@demo.net';
   const demoPass = 'demopass';
-  let isDemo = false;
+  const demoUID = 'p5W6RqpTjVRRSPmARUFK6NniovH2';
   let isInitialized = false;
   let subscribers = [];
 
@@ -32,13 +32,11 @@ export default (() => {
       return firebase.auth().signInWithPopup(googleAuthProvider);
     },
     signInWithDemo: () => {
-      isDemo = true;
       return firebase.auth().signInWithEmailAndPassword(demoEmail, demoPass);
     },
     signOut: () => {
-      isDemo = false;
       return firebase.auth().signOut();
     },
-    isDemo: () => isDemo
+    isDemo: (uid) => uid === demoUID
   };
 })();

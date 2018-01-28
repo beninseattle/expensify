@@ -28,7 +28,7 @@ class App extends React.Component {
       if( user ){
         this.store.dispatch(login({
           uid: user.uid,
-          isDemo: Auth.isDemo()
+          isDemo: Auth.isDemo(user.uid)
         }));
         this.store.dispatch(startSetExpenses()).then(() => {
           this.setState({loading: false});
