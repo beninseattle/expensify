@@ -11,26 +11,27 @@ import Expense from '../models/expense';
  * @property {onSubmitExpenseCallback} props.onSubmit
  * @property {Expense} props.expense
  * @property {Object} state
- * @property {Expense} state.expense
+ * @property {string} state.expense.id
+ * @property {string} state.expense.description
+ * @property {string} state.expense.note
+ * @property {string} state.expense.amount
+ * @property {int} state.expense.createdAt
  */
 export default class ExpenseForm extends Component {
   onDescriptionChange = (e) => {
-    let newExpense = new Expense(this.state.expense);
-    newExpense.description = e.target.value;
-    this.setState(() => ({expense: newExpense}));
+    let newDescription = e.target.value;
+    this.setState(() => ({description: newDescription}));
   };
   onNoteChange = (e) => {
-    let newExpense = new Expense(this.state.expense);
-    newExpense.note = e.target.value;
-    this.setState(() => ({expense: newExpense}));
+    let newNote = e.target.value;
+    this.setState(() => ({note: newNote}));
   };
-  // TODO: Fix this input
+  // Amount needs to handle incomplete string representations of numbers
   onAmountChange = (e) => {
     const amount = e.target.value;
     if (!amount || amount.match(/^\d+(\.\d{0,2})?$/)) {
-      let newExpense = new Expense(this.state.expense);
-      newExpense.amount = parseFloat(amount) * 100;
-      this.setState(() => ({expense: newExpense}));
+      let newAmount = amount.trim();
+      this.setState(() => ({amount: newAmount}));
     }
   };
 
@@ -39,9 +40,8 @@ export default class ExpenseForm extends Component {
    */
   onDateChange = (createdAt) => {
     if (createdAt) {
-      let newExpense = new Expense(this.state.expense);
-      newExpense.createdAt = createdAt.valueOf();
-      this.setState(() => ({expense: newExpense}));
+      let newCreatedAt = createdAt.valueOf();
+      this.setState(() => ({createdAt: newCreatedAt}));
     }
   };
   onFocusChange = ({focused}) => {
@@ -50,11 +50,19 @@ export default class ExpenseForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!this.state.expense.isValid()) {
+    const expense = new Expense({
+      id: this.state.expenseId,
+      description: this.state.description.trim(),
+      note: this.state.note.trim(),
+      amount: parseFloat(this.state.amount) * 100,
+      createdAt: this.state.createdAt
+    });
+
+    if (!expense.isValid()) {
       this.setState(() => ({error: 'A description and amount is required'}));
     } else {
       this.setState(() => ({error: ''}));
-      this.props.onSubmit(this.state.expense);
+      this.props.onSubmit(expense);
     }
   };
 
@@ -65,16 +73,19 @@ export default class ExpenseForm extends Component {
    */
   constructor(props) {
     super(props);
-    this.submitButton = 'Save changes';
-    let expense = props.expense;
-    if (expense === undefined) {
-      expense = new Expense();
-      this.submitButton = 'Save expense';
-    }
+    const expense = props.expense;
+    this.submitButton = expense !== undefined ? 'Save changes' : 'Save expense';
+    let expenseFields = {
+      expenseId: expense !== undefined ? expense.id : undefined,
+      description: expense !== undefined ? expense.description : '',
+      note: expense !== undefined ? expense.note : '',
+      amount: expense !== undefined ? (expense.amount / 100).toFixed(2) : '',
+      createdAt: expense !== undefined ? expense.createdAt : undefined
+    };
     this.state = {
-      expense: expense,
       calendarFocused: false,
-      error: ''
+      error: '',
+      ...expenseFields
     };
   };
 
@@ -88,7 +99,7 @@ export default class ExpenseForm extends Component {
           placeholder="Description"
           name="description"
           autoFocus
-          value={this.state.expense.description}
+          value={this.state.description}
           onChange={this.onDescriptionChange}
         />
         <input
@@ -96,11 +107,11 @@ export default class ExpenseForm extends Component {
           type="text"
           placeholder="Amount"
           name="amount"
-          value={this.state.expense.amountAsFloat()}
+          value={this.state.amount}
           onChange={this.onAmountChange}
         />
         <SingleDatePicker
-          date={moment(this.state.expense.createdAt)}
+          date={moment(this.state.createdAt)}
           onDateChange={this.onDateChange}
           focused={this.state.calendarFocused}
           onFocusChange={this.onFocusChange}
@@ -111,7 +122,7 @@ export default class ExpenseForm extends Component {
           className="textarea"
           name="note"
           placeholder="Add a note (optional)"
-          value={this.state.expense.note}
+          value={this.state.note}
           onChange={this.onNoteChange}/><br/>
         <div>
           <button className="button">{this.submitButton}</button>
