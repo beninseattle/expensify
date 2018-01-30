@@ -11,13 +11,15 @@ import paths from '../routers/paths';
  * @param {int} props.expensesTotal
  * @constructor
  */
-export const ExpenseListHeader = ({expensesCount, expensesTotal}) => {
+export const ExpenseListHeader = ({expensesCount, expensesCountTotal, expensesTotal}) => {
   const expenseWord = expensesCount === 1 ? 'expense' : 'expenses';
   const formattedTotal = (expensesTotal/100).toLocaleString(undefined, {style: 'currency', currency: 'USD'});
   return (
     <div className="page-header">
       <div className="content-container">
-        <h1 className="page-header__title"><span>{expensesCount}</span> {expenseWord} found for a total of <span>{formattedTotal}</span></h1>
+        <h1 className="page-header__title">
+          <strong>{expensesCount}</strong> {expenseWord} found <span>(of {expensesCountTotal})</span> for a total of <span>{formattedTotal}</span>
+        </h1>
         <div className="page-header__actions">
           <Link className="button" to={paths.addExpense}>Add Expense</Link>
         </div>
@@ -30,6 +32,7 @@ const mapStateToProps = (state) => {
   const visibleExpenses = selectExpenses(state.expenses, state.filters);
   return {
     expensesCount: visibleExpenses.length,
+    expensesCountTotal: state.expenses.length,
     expensesTotal: selectExpensesTotal(visibleExpenses)
   };
 };
