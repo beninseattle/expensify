@@ -6,7 +6,6 @@ import 'react-dates/initialize';
 import {DateRangePicker} from 'react-dates';
 import {setTextFilter, setStartDate, setStopDate, sortByAmount, sortByDate} from "../store/actions/filters";
 
-// TODO: Set up type object for filters object?
 /**
  * @property {Object} props
  * @property {function(string)} props.setTextFilter

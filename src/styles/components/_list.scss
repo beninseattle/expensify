@@ -4,7 +4,24 @@
   color: $grey;
   display: flex;
   justify-content: space-between;
-  padding: $small-size $med-size;
+  div {
+    padding: $small-size $med-size;
+    transition: background .3s ease;
+    &:hover {
+      background: darken($off-white, 7%);
+    }
+  }
+}
+
+.list-header--left {
+  cursor: pointer;
+  flex: 1 1 auto;
+}
+
+.list-header--right {
+  cursor: pointer;
+  border-left: 1px solid darken($off-white, 7%);
+  flex: 0 1 auto;
 }
 
 .list-body {

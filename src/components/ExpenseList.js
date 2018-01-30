@@ -2,18 +2,19 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../store/selectors/expenses';
+import {setStartDate, setStopDate, setTextFilter, sortByAmount, sortByDate} from "../store/actions/filters";
 
 /**
  * @param {Object} props
  * @param {Expense[]} props.expenses
  * @constructor
  */
-export const ExpenseList = ({expenses}) => (
+export const ExpenseList = ({expenses, sortByDate, sortByAmount}) => (
   <div className="content-container">
     <div className="list-header">
       <div className="show-for-mobile">Expenses</div>
-      <div className="show-for-desktop">Expense</div>
-      <div className="show-for-desktop">Amount</div>
+      <div onClick={sortByDate} className="list-header--left show-for-desktop">Expense</div>
+      <div onClick={sortByAmount} className="list-header--right show-for-desktop">Amount</div>
     </div>
     <div className="list-body">
     {
@@ -39,5 +40,10 @@ const mapStateToProps = (state) => {
     expenses: selectExpenses(state.expenses, state.filters)
   };
 };
+const mapDispatchToProps = (dispatch) => ({
+  sortByDate: () => dispatch(sortByDate()),
+  sortByAmount: () => dispatch(sortByAmount())
+});
 
-export default connect(mapStateToProps)(ExpenseList);
+
+export default connect(mapStateToProps, mapDispatchToProps)(ExpenseList);
